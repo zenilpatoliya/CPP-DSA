@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int sumDigit(int n);
+
+
+int main(){
+    int n;
+
+    cout << "Enter a number : ";
+    cin >> n; 
+    
+    cout << "sum = " << sumDigit(n) << endl;
+
+    return 0;
+}
+
+int sumDigit(int n){
+    int sum = 0;
+    while(n > 0){
+    int lastDigit = n % 10;
+    sum += lastDigit;
+    n /= 10;
+    }
+    return sum;
+}
